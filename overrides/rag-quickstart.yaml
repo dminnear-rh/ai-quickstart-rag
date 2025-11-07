@@ -1,0 +1,12 @@
+llm-service:
+  secret:
+    enabled: false
+
+pgvector:
+  secret:
+    enabled: false
+
+configure-pipeline:
+  minio:
+    secret:
+      enabled: false

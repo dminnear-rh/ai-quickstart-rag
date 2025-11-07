@@ -1,0 +1,45 @@
+clusterGroup:
+  name: prod
+
+  namespaces:
+    - ai-quickstart-rag
+    - vault
+    - golang-external-secrets
+
+  subscriptions:
+    serverless:
+      name: serverless-operator
+      namespace: openshift-serverless
+    servicemesh:
+      name: servicemeshoperator
+      namespace: openshift-operators
+    rhoai:
+      name: rhods-operator
+      namespace: redhat-ods-operator
+
+  applications:
+    golang-external-secrets:
+      name: golang-external-secrets
+      namespace: golang-external-secrets
+      chart: golang-external-secrets
+      chartVersion: 0.1.*
+
+    vault:
+      name: vault
+      namespace: vault
+      chart: hashicorp-vault
+      chartVersion: 0.1.*
+
+    rag-quickstart:
+      name: rag-quickstart
+      namespace: ai-quickstart-rag
+      repoURL: https://github.com/rh-ai-quickstart/RAG
+      chartVersion: dev
+      path: deploy/helm/rag
+      extraValuesFiles:
+        - $patternref/overrides/rag-quickstart.yaml
+
+    pattern-secrets:
+      name: pattern-secrets
+      namespace: ai-quickstart-rag
+      path: charts/pattern-secrets
