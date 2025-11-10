@@ -17,3 +17,5 @@ spec:
         name: knative-serving
     datasciencepipelines:
       managementState: Managed
+    workbenches:
+      managementState: Managed
