@@ -19,3 +19,5 @@ spec:
       managementState: Managed
     workbenches:
       managementState: Managed
+    dashboard:
+      managementState: Managed
