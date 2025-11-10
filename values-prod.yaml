@@ -45,7 +45,7 @@ clusterGroup:
       repoURL: https://github.com/rh-ai-quickstart/RAG
       chartVersion: dev
       path: deploy/helm/rag
-      extraValuesFiles:
+      extraValueFiles:
         - $patternref/overrides/rag-quickstart.yaml
 
     pattern-secrets:
