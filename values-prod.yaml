@@ -11,6 +11,8 @@ clusterGroup:
     - openshift-serverless:
         operatorGroup: true
         targetNamespaces: []
+    - openshift-pipelines
+    - redhat-ods-applications
 
   sharedValueFiles:
     - '/overrides/values-{{ $.Values.global.device }}.yaml'
@@ -25,6 +27,8 @@ clusterGroup:
     rhoai:
       name: rhods-operator
       namespace: redhat-ods-operator
+    pipelines:
+      name: openshift-pipelines-operator-rh
 
   applications:
     golang-external-secrets:
