@@ -12,7 +12,7 @@ spec:
         ingressGateway:
           certificate:
             secretName: knative-serving-cert
-           type: OpenshiftDefaultIngress
+            type: OpenshiftDefaultIngress
         managementState: Managed
         name: knative-serving
     datasciencepipelines:
