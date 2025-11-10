@@ -52,3 +52,8 @@ clusterGroup:
       name: pattern-secrets
       namespace: ai-quickstart-rag
       path: charts/pattern-secrets
+
+    data-science-cluster:
+      name: data-science-cluster
+      namespace: ai-quickstart-rag
+      path: charts/dsc
