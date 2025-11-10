@@ -5,6 +5,12 @@ clusterGroup:
     - ai-quickstart-rag
     - vault
     - golang-external-secrets
+    - redhat-ods-operator:
+        operatorGroup: true
+        targetNamespaces: []
+    - openshift-serverless:
+        operatorGroup: true
+        targetNamespaces: []
 
   sharedValueFiles:
     - '/overrides/values-{{ $.Values.global.device }}.yaml'
