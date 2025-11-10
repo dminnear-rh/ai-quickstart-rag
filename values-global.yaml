@@ -1,6 +1,6 @@
 global:
   pattern: ai-quickstart-rag
-  accelerator: cpu
+  device: cpu
 main:
   clusterGroupName: prod
   multiSourceConfig:

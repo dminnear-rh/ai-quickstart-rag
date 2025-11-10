@@ -6,6 +6,9 @@ clusterGroup:
     - vault
     - golang-external-secrets
 
+  sharedValueFiles:
+    - '/overrides/values-{{ $.Values.global.device }}.yaml'
+
   subscriptions:
     serverless:
       name: serverless-operator
