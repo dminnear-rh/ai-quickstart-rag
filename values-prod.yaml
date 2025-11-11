@@ -2,17 +2,17 @@ clusterGroup:
   name: prod
 
   namespaces:
-    - ai-quickstart-rag
-    - vault
-    - golang-external-secrets
-    - redhat-ods-operator:
+    ai-quickstart-rag:
+    vault:
+    golang-external-secrets:
+    redhat-ods-operator:
         operatorGroup: true
         targetNamespaces: []
-    - openshift-serverless:
+    openshift-serverless:
         operatorGroup: true
         targetNamespaces: []
-    - openshift-pipelines
-    - redhat-ods-applications
+    openshift-pipelines:
+    redhat-ods-applications:
 
   sharedValueFiles:
     - '/overrides/values-{{ $.Values.global.device }}.yaml'
