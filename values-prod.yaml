@@ -13,9 +13,12 @@ clusterGroup:
         targetNamespaces: []
     openshift-pipelines:
     redhat-ods-applications:
+    rhoai-model-registries:
+    rhods-notebooks:
 
   sharedValueFiles:
     - '/overrides/values-{{ $.Values.global.device }}.yaml'
+    - '/overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml'
 
   subscriptions:
     serverless:

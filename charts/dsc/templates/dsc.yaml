@@ -4,6 +4,8 @@ metadata:
   name: default-dsc
 spec:
   components:
+    codeflare:
+      managementState: Managed
     kserve:
       managementState: Managed
       defaultDeploymentMode: RawDeployment
@@ -15,9 +17,17 @@ spec:
             type: OpenshiftDefaultIngress
         managementState: Managed
         name: knative-serving
-    datasciencepipelines:
+    modelregistry:
       managementState: Managed
+      registriesNamespace: rhoai-model-registries
     workbenches:
       managementState: Managed
+      workbenchNamespace: rhods-notebooks
     dashboard:
+      managementState: Managed
+    modelmeshserving:
+      managementState: Managed
+    llamastackoperator:
+      managementState: Managed
+    datasciencepipelines:
       managementState: Managed
