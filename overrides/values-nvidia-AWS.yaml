@@ -11,8 +11,8 @@ clusterGroup:
           - machineset_name=nvidia-gpu
           - machineset_labels=
           - machineset_instance_type=g5.2xlarge
-          - machineset_taints=[{"effect":"NoSchedule","key":"odh-notebook","value":"true"}]
-          - machineset_node_labels={"node-role.kubernetes.io/odh-notebook": ""}
+          - 'machineset_taints=[{"effect":"NoSchedule","key":"odh-notebook","value":"true"}]'
+          - 'machineset_node_labels={"node-role.kubernetes.io/odh-notebook": ""}'
           - machineset_api_version=machine.openshift.io/v1beta1
     clusterRoleYaml:
       - apiGroups:
