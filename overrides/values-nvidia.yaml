@@ -23,6 +23,10 @@ clusterGroup:
       name: nfd
       namespace: openshift-nfd
       path: charts/nfd
+    nvidia-config:
+      name: nvidia-config
+      namespace: nvidia-gpu-operator
+      path: charts/nvidia-config
 
   imperative:
     jobs:
