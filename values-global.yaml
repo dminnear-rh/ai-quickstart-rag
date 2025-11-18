@@ -1,7 +1,7 @@
 global:
   pattern: ai-quickstart-rag
   # device should be cpu, nvidia, intel, or amd
-  device: nvidia
+  device: cpu
 main:
   clusterGroupName: prod
   multiSourceConfig:
