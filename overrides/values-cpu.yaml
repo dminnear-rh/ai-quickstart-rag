@@ -1,9 +1,3 @@
-# llm-service:
-#   device: cpu
-#   models:
-#     llama-guard-3-1b:
-#       enabled: true
-
 global:
   models:
     llama-3-2-1b-instruct:

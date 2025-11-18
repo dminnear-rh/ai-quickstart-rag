@@ -1,5 +1,4 @@
-llm-service:
-  device: gpu
+global:
   models:
     llama-3-2-3b-instruct:
       enabled: true
