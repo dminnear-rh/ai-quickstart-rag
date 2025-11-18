@@ -4,9 +4,12 @@ llm-service:
 
 pgvector:
   secret:
-    enabled: false
+    create: false
 
 configure-pipeline:
+  secret:
+    create: false
+
   minio:
     secret:
-      enabled: false
+      create: false
