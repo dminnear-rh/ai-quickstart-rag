@@ -50,7 +50,7 @@ clusterGroup:
       name: rag-quickstart
       namespace: ai-quickstart-rag
       repoURL: https://github.com/rh-ai-quickstart/RAG
-      chartVersion: dev
+      chartVersion: main
       path: deploy/helm/rag
       extraValueFiles:
         - $patternref/overrides/rag-quickstart.yaml
