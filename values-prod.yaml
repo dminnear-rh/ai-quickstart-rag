@@ -19,6 +19,8 @@ clusterGroup:
   sharedValueFiles:
     - '/overrides/values-{{ $.Values.global.device }}.yaml'
     - '/overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml'
+    - '$patternref/overrides/values-{{ $.Values.global.device }}.yaml'
+    - '$patternref/overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml'
 
   subscriptions:
     serverless:
