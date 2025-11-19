@@ -1,4 +1,6 @@
-global:
+llm-service:
+  device: gpu
+
   models:
     llama-3-2-3b-instruct:
       enabled: true
@@ -26,28 +28,3 @@ clusterGroup:
       name: nvidia-config
       namespace: nvidia-gpu-operator
       path: charts/nvidia-config
-
-  imperative:
-    jobs:
-      - name: deploy-nvidia-gpu
-        playbook: ansible/deploy_nvidia_gpu_aws.yaml
-        verbosity: -vvv
-    clusterRoleYaml:
-      - apiGroups:
-          - "*"
-        resources:
-          - machinesets
-          - persistentvolumeclaims
-          - datavolumes
-          - dataimportcrons
-          - datasources
-        verbs:
-          - "*"
-      - apiGroups:
-          - "*"
-        resources:
-          - "*"
-        verbs:
-          - get
-          - list
-          - watch
