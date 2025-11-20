@@ -17,10 +17,8 @@ clusterGroup:
     rhods-notebooks:
 
   sharedValueFiles:
-    - '/overrides/values-{{ $.Values.global.device }}.yaml'
-    - '/overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml'
-    - '$patternref/overrides/values-{{ $.Values.global.device }}.yaml'
-    - '$patternref/overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml'
+    - /overrides/values-{{ $.Values.global.device }}.yaml
+    - /overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml
 
   subscriptions:
     serverless:
@@ -55,7 +53,7 @@ clusterGroup:
       chartVersion: main
       path: deploy/helm/rag
       extraValueFiles:
-        - $patternref/overrides/rag-quickstart.yaml
+        - /overrides/rag-quickstart.yaml
 
     pattern-secrets:
       name: pattern-secrets
