@@ -34,8 +34,8 @@ clusterGroup:
     rag-quickstart:
       name: rag-quickstart
       namespace: ai-quickstart-rag-prod
-      repoURL: https://github.com/rh-ai-quickstart/RAG
-      chartVersion: main
+      repoURL: https://github.com/dminnear-rh/RAG
+      chartVersion: sync-fixes
       path: deploy/helm/rag
       extraValueFiles:
         - /overrides/rag-quickstart.yaml
