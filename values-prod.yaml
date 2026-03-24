@@ -2,43 +2,28 @@ clusterGroup:
   name: prod
 
   namespaces:
-    ai-quickstart-rag:
     vault:
     golang-external-secrets:
     redhat-ods-operator:
         operatorGroup: true
         targetNamespaces: []
-    openshift-serverless:
-        operatorGroup: true
-        targetNamespaces: []
-    openshift-pipelines:
-    redhat-ods-applications:
-    rhoai-model-registries:
-    rhods-notebooks:
 
   sharedValueFiles:
     - /overrides/values-{{ $.Values.global.device }}.yaml
     - /overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml
 
   subscriptions:
-    serverless:
-      name: serverless-operator
-      namespace: openshift-serverless
-    servicemesh:
-      name: servicemeshoperator
-      namespace: openshift-operators
     rhoai:
       name: rhods-operator
       namespace: redhat-ods-operator
-    pipelines:
-      name: openshift-pipelines-operator-rh
+      channel: stable-3.x
 
   applications:
     golang-external-secrets:
       name: golang-external-secrets
       namespace: golang-external-secrets
       chart: golang-external-secrets
-      chartVersion: 0.1.*
+      chartVersion: 0.2.*
 
     vault:
       name: vault
@@ -48,7 +33,7 @@ clusterGroup:
 
     rag-quickstart:
       name: rag-quickstart
-      namespace: ai-quickstart-rag
+      namespace: ai-quickstart-rag-prod
       repoURL: https://github.com/rh-ai-quickstart/RAG
       chartVersion: main
       path: deploy/helm/rag
@@ -57,10 +42,10 @@ clusterGroup:
 
     pattern-secrets:
       name: pattern-secrets
-      namespace: ai-quickstart-rag
+      namespace: ai-quickstart-rag-prod
       path: charts/pattern-secrets
 
     data-science-cluster:
       name: data-science-cluster
-      namespace: ai-quickstart-rag
+      namespace: ai-quickstart-rag-prod
       path: charts/dsc
