@@ -1,11 +1,6 @@
 global:
   pattern: ai-quickstart-rag
-  # device should be one of:
-  #   cpu
-  #   gpu (NVIDIA GPU configuration)
-  #   hpu (Intel Gaudi)
-  #   gpu-amd (AMD GPU configuration)
-  device: gpu
+  device: gpu # one of 'cpu' (no GPU) or 'gpu' (NVIDIA GPU)
 main:
   clusterGroupName: prod
   multiSourceConfig:
