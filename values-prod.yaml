@@ -26,17 +26,18 @@ clusterGroup:
       channel: stable-3.x
 
   applications:
-    golang-external-secrets:
-      name: golang-external-secrets
-      namespace: golang-external-secrets
-      chart: golang-external-secrets
-      chartVersion: 0.2.*
-
     vault:
       name: vault
       namespace: vault
       chart: hashicorp-vault
       chartVersion: 0.1.*
+
+    openshift-external-secrets:
+      name: openshift-external-secrets
+      namespace: external-secrets
+      argoProject: hub
+      chart: openshift-external-secrets
+      chartVersion: 0.0.*
 
     pattern-secrets:
       name: pattern-secrets
