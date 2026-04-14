@@ -6,3 +6,7 @@ main:
   multiSourceConfig:
     enabled: true
     clusterGroupChartVersion: 0.9.*
+  models:
+    llama-3-8b-instruct:
+      id: meta-llama/Meta-Llama-3-8B-Instruct
+      enabled: true
