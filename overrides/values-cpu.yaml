@@ -1,6 +1,8 @@
-llm-serice:
+llm-service:
   device: cpu
 
+global:
   models:
-    llama-3-2-1b-instruct:
+    llama-3-8b-instruct:
+      id: meta-llama/Meta-Llama-3-8B-Instruct
       enabled: true
