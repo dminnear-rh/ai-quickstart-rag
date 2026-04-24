@@ -19,7 +19,9 @@ global:
         - /chat-templates/tool_chat_template_llama3.2_json.jinja
         - --tool-call-parser
         - llama3_json
+        - --dtype
+        - auto
         - --max-model-len
-        - "8192"
+        - "12288"
         - --max-num-seqs
-        - "2"
+        - "1"
