@@ -11,7 +11,6 @@ global:
           cpu: "24"
           memory: 150Gi
       args:
-        - --enable-auto-tool-choice
         - --chat-template
         - /chat-templates/tool_chat_template_qwen.jinja
         - --max-model-len
