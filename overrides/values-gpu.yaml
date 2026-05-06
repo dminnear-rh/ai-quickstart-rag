@@ -18,6 +18,8 @@ global:
         - --enable-auto-tool-choice
         - --quantization
         - fp8
+        - --max-model-len
+        - "32768"
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
