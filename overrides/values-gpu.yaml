@@ -7,11 +7,9 @@ global:
         limits:
           cpu: "16"
           memory: "128Gi"
-          nvidia.com/gpu: "2"
         requests:
           cpu: "8"
           memory: "64Gi"
-          nvidia.com/gpu: "2"
       args:
         - --enable-auto-tool-choice
         - --chat-template
