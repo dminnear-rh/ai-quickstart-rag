@@ -12,7 +12,7 @@ global:
           memory: 150Gi
       args:
         - --reasoning-parser
-        - deepseek-r1
+        - deepseek_r1
         - --tool-call-parser
         - deepseek_v3
         - --enable-auto-tool-choice
