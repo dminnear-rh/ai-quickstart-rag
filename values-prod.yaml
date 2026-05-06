@@ -13,7 +13,6 @@ clusterGroup:
 
   sharedValueFiles:
     - /overrides/values-{{ $.Values.global.device }}.yaml
-    - /overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml
 
   subscriptions:
     eso:
@@ -24,6 +23,9 @@ clusterGroup:
       name: rhods-operator
       namespace: redhat-ods-operator
       channel: stable-3.x
+    lvms:
+      name: lvms-operator
+      namespace: openshift-storage
 
   applications:
     vault:
@@ -47,6 +49,11 @@ clusterGroup:
       name: data-science-cluster
       namespace: ai-quickstart-rag-prod
       path: charts/dsc
+
+    lvms:
+      name: lvms
+      namespace: openshift-storage
+      path: charts/lvms
 
     rag-quickstart:
       name: rag-quickstart
