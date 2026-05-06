@@ -16,11 +16,10 @@ global:
         - --max-model-len
         - "131072"
         - --enforce-eager
-        - --reasoning-parser
-        - qwen3
         - --tool-call-parser
         - qwen3_coder
         - --enable-auto-tool-choice
+        - --language-model-only
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
