@@ -15,7 +15,7 @@ global:
         - --chat-template
         - /chat-templates/tool_chat_template_qwen.jinja
         - --tool-call-parser
-        - llama3_json
+        - openai
         - --max-model-len
         - "131072"
         - --enforce-eager
