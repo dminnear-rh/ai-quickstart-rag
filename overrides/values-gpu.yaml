@@ -14,8 +14,6 @@ global:
         - --enable-auto-tool-choice
         - --chat-template
         - /chat-templates/tool_chat_template_qwen.jinja
-        - --tool-call-parser
-        - openai
         - --max-model-len
         - "131072"
         - --enforce-eager
