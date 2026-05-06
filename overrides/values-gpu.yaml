@@ -37,9 +37,9 @@ global:
 
 llm-service:
   device: gpu
-  deviceConfigs:
-    gpu:
-      image: vllm/vllm-openai:nightly
+  # deviceConfigs:
+  #   gpu:
+  #     image: vllm/vllm-openai:nightly
 
 clusterGroup:
   namespaces:
