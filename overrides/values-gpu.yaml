@@ -15,11 +15,14 @@ global:
         - /chat-templates/tool_chat_template_qwen.jinja
         - --max-model-len
         - "131072"
-        - --enforce-eager
         - --tool-call-parser
         - qwen3_coder
         - --enable-auto-tool-choice
         - --language-model-only
+        - --reasoning-parser
+        - qwen3
+        - --moe_backend
+        - flashinfer_cutlass
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
