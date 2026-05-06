@@ -21,7 +21,7 @@ global:
         - --dtype
         - float16
         - --max-model-len
-        - "16384"
+        - "65536"
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
