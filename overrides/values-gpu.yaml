@@ -1,7 +1,7 @@
 global:
   models:
-    qwen-3-5-122b:
-      id: RedHatAI/Qwen3.5-122B-A10B-NVFP4
+    deepseek-r1:
+      id: deepseek-ai/DeepSeek-R1-Distill-Llama-70B
       enabled: true
       resources:
         limits:
@@ -11,20 +11,11 @@ global:
           cpu: "24"
           memory: 150Gi
       args:
-        - --chat-template
-        - /chat-templates/tool_chat_template_qwen.jinja
-        - --max-model-len
-        - "131072"
-        - --tool-call-parser
-        - qwen3_coder
-        - --enable-auto-tool-choice
-        - --language-model-only
         - --reasoning-parser
-        - qwen3
-        - --moe_backend
-        - flashinfer_cutlass
-        - --chat-template-kwargs
-        - '{"enable_thinking": true}'
+        - deepseek-r1
+        - --tool-call-parser
+        - deepseekv3
+        - --enable-auto-tool-choice
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
