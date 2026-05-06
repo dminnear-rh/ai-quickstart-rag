@@ -59,6 +59,11 @@ clusterGroup:
       namespace: openshift-storage
       path: charts/lvms
 
+    image-registry:
+      name: image-registry
+      namespace: openshift-image-registry
+      path: charts/image-registry
+
     rag-quickstart:
       name: rag-quickstart
       namespace: ai-quickstart-rag-prod
