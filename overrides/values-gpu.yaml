@@ -16,6 +16,8 @@ global:
         - --tool-call-parser
         - deepseek_v3
         - --enable-auto-tool-choice
+        - --quantization
+        - fp8
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
