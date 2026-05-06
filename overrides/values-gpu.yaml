@@ -17,7 +17,9 @@ global:
         - llama3_json
         - --enable-auto-tool-choice
         - --quantization
-        - awq
+        - awq_marlin
+        - --dtype
+        - float16
         - --max-model-len
         - "16384"
     gpt-oss-120b:
