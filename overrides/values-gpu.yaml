@@ -19,7 +19,7 @@ global:
         - --quantization
         - fp8
         - --max-model-len
-        - "32768"
+        - "16384"
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
