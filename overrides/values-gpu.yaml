@@ -1,7 +1,7 @@
 global:
   models:
     deepseek-r1:
-      id: deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+      id: Valdemardi/DeepSeek-R1-Distill-Llama-70B-AWQ
       enabled: true
       resources:
         limits:
@@ -17,7 +17,7 @@ global:
         - llama3_json
         - --enable-auto-tool-choice
         - --quantization
-        - fp8
+        - awq
         - --max-model-len
         - "16384"
     gpt-oss-120b:
