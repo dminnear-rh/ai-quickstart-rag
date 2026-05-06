@@ -23,6 +23,8 @@ global:
         - qwen3
         - --moe_backend
         - flashinfer_cutlass
+        - --chat-template-kwargs
+        - '{"enable_thinking": true}'
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
