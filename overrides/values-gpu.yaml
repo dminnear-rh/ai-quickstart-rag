@@ -18,6 +18,7 @@ global:
         - llama3_json
         - --max-model-len
         - "131072"
+        - --enforce-eager
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
