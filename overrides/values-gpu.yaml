@@ -5,17 +5,19 @@ global:
       enabled: true
       resources:
         limits:
-          cpu: "16"
-          memory: "128Gi"
+          cpu: "32"
+          memory: 200Gi
         requests:
-          cpu: "8"
-          memory: "64Gi"
+          cpu: "24"
+          memory: 150Gi
       args:
         - --enable-auto-tool-choice
         - --chat-template
         - /chat-templates/tool_chat_template_qwen.jinja
         - --tool-call-parser
         - llama3_json
+        - --max-model-len
+        - "131072"
     gpt-oss-120b:
       id: openai/gpt-oss-120b
       enabled: true
