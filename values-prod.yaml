@@ -5,11 +5,15 @@ clusterGroup:
     vault:
     external-secrets:
     external-secrets-operator:
-        operatorGroup: true
-        targetNamespaces: []
+      operatorGroup: true
+      targetNamespaces: []
     redhat-ods-operator:
-        operatorGroup: true
-        targetNamespaces: []
+      operatorGroup: true
+      targetNamespaces: []
+    openshift-storage:
+      operatorGroup: true
+      targetNamespaces:
+        - openshift-storage
 
   sharedValueFiles:
     - /overrides/values-{{ $.Values.global.device }}.yaml
