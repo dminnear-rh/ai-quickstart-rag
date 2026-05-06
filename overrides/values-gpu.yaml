@@ -2,6 +2,20 @@ global:
   models:
     llama-3-2-3b-instruct:
       enabled: true
+    gpt-oss-120b:
+      id: openai/gpt-oss-120b
+      enabled: true
+      resources:
+        limits:
+          cpu: "32"
+          memory: 200Gi
+        requests:
+          cpu: "24"
+          memory: 150Gi
+      args:
+        - --tool-call-parser
+        - openai
+        - --enable-auto-tool-choice
 
 llm-service:
   device: gpu

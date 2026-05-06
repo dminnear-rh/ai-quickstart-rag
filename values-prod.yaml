@@ -64,6 +64,11 @@ clusterGroup:
       namespace: openshift-image-registry
       path: charts/image-registry
 
+    bento-box-links:
+      name: bento-box-links
+      namespace: openshift-bento-box-links
+      path: charts/bento-box-links
+
     rag-quickstart:
       name: rag-quickstart
       namespace: ai-quickstart-rag-prod
