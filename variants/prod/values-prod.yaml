@@ -10,10 +10,11 @@ clusterGroup:
     redhat-ods-operator:
         operatorGroup: true
         targetNamespaces: []
+    ai-quickstart-rag:
 
   sharedValueFiles:
-    - /overrides/values-{{ $.Values.global.device }}.yaml
-    - /overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml
+    - /variants/prod/overrides/values-{{ $.Values.global.device }}.yaml
+    - /variants/prod/overrides/values-{{ $.Values.global.device }}-{{ $.Values.global.clusterPlatform }}.yaml
 
   subscriptions:
     eso:
@@ -40,17 +41,17 @@ clusterGroup:
 
     pattern-secrets:
       name: pattern-secrets
-      namespace: ai-quickstart-rag-prod
+      namespace: ai-quickstart-rag
       path: charts/pattern-secrets
 
     data-science-cluster:
       name: data-science-cluster
-      namespace: ai-quickstart-rag-prod
+      namespace: ai-quickstart-rag
       path: charts/dsc
 
     rag-quickstart:
       name: rag-quickstart
-      namespace: ai-quickstart-rag-prod
+      namespace: ai-quickstart-rag
       repoURL: https://github.com/rh-ai-quickstart/RAG
       chartVersion: main
       path: deploy/helm/rag

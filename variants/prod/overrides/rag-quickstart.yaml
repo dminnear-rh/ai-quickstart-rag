@@ -93,7 +93,3 @@ ingestion-pipeline:
         path: notebooks/techsupport
         token: auth_token
         branch: main
-
-  minio:
-    secret:
-      create: false
