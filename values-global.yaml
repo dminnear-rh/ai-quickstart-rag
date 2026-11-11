@@ -1,8 +1,10 @@
 global:
   pattern: ai-quickstart-rag
   device: cpu # one of 'cpu' (no GPU) or 'gpu' (NVIDIA GPU)
+  singleArgoCD: true
+
 main:
-  clusterGroupName: prod
+  variant: prod
   multiSourceConfig:
     enabled: true
     clusterGroupChartVersion: 0.9.*
